@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reconquérir Son Ex — Le guide complet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FBF6F1; --ink: #2A2019; --wine: #7C2743; --wine-light: #F3E4E9;
+    --gold: #B98B4E; --muted: #6B5F58; --line: #E4D8CE; --paper: #FFFFFF;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #211A17; --ink: #F1E9E2; --wine: #E6A6BC; --wine-light: #3A2229;
+      --gold: #D8B27C; --muted: #B9ACA3; --line: #43362F; --paper: #2A211D;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #211A17; --ink: #F1E9E2; --wine: #E6A6BC; --wine-light: #3A2229;
+    --gold: #D8B27C; --muted: #B9ACA3; --line: #43362F; --paper: #2A211D;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  * { box-sizing: border-box; }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: 'Work Sans', -apple-system, sans-serif;
+    line-height: 1.6;
+    background-image: radial-gradient(circle at 85% -5%, var(--wine-light) 0%, transparent 45%);
+  }
+  h1, h2, .serif { font-family: 'Fraunces', Georgia, serif; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 64px 0; }
+  .hero {
+    padding: 72px 0 56px; border-bottom: 1px solid var(--line);
+    display: grid; grid-template-columns: 1.2fr 0.9fr; gap: 30px; align-items: center;
+  }
+  @media (max-width: 620px) { .hero { grid-template-columns: 1fr; padding-top: 40px; } .hero .art { order: -1; max-width: 220px; margin: 0 auto; } }
+  .hero-text { animation: rise 0.7s ease-out both; }
+  .art { animation: fade 1s ease-out 0.15s both; }
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+  .kicker { font-family: 'Fraunces', serif; font-style: italic; color: var(--wine); font-size: 1.05rem; margin: 0 0 18px; }
+  h1 { font-size: clamp(2rem, 5.6vw, 3rem); font-weight: 600; line-height: 1.12; margin: 0 0 22px; }
+  .lede { font-size: 1.12rem; color: var(--muted); margin: 0 0 30px; }
+  .cta {
+    display: inline-block; background: var(--wine); color: #fff; text-decoration: none;
+    font-family: 'Work Sans', sans-serif; font-weight: 600; font-size: 1.02rem;
+    padding: 15px 30px; border-radius: 3px; letter-spacing: 0.01em;
+    box-shadow: 0 10px 26px -12px rgba(124,39,67,0.55);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .cta:hover { transform: translateY(-1px); box-shadow: 0 14px 30px -12px rgba(124,39,67,0.6); }
+  .price-note { font-size: 0.92rem; color: var(--muted); margin-top: 14px; }
+  .divider { border: none; border-top: 1px solid var(--line); margin: 0; }
+  .ache p { font-size: 1.08rem; }
+  .ache strong { color: var(--wine); font-weight: 600; }
+  .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 36px; }
+  @media (max-width: 560px) { .who-grid { grid-template-columns: 1fr; } }
+  .who-card { border-left: 2px solid var(--wine); padding-left: 18px; }
+  .who-card h3 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.15rem; margin: 0 0 8px; }
+  .who-card p { color: var(--muted); margin: 0; font-size: 0.98rem; }
+  .toc { list-style: none; padding: 0; margin: 36px 0 0; counter-reset: ch; }
+  .toc li { counter-increment: ch; display: flex; gap: 18px; padding: 14px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+  .toc li::before { content: counter(ch); font-family: 'Fraunces', serif; font-style: italic; color: var(--gold); font-size: 1.1rem; min-width: 22px; }
+  .toc .t { font-weight: 500; }
+  .toc .d { color: var(--muted); font-size: 0.92rem; display: block; margin-top: 2px; }
+  blockquote {
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 1.3rem;
+    color: var(--wine); border-left: 2px solid var(--gold); padding-left: 22px;
+    margin: 40px 0; max-width: 40ch;
+  }
+  .faq-item { padding: 22px 0; border-bottom: 1px solid var(--line); }
+  .faq-item h3 { font-size: 1.02rem; margin: 0 0 8px; font-weight: 600; }
+  .faq-item p { margin: 0; color: var(--muted); font-size: 0.98rem; }
+  .testi-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 22px; margin-top: 34px; }
+  @media (max-width: 700px) { .testi-grid { grid-template-columns: 1fr; } }
+  .testi-card { background: var(--paper); border: 1px solid var(--line); border-radius: 4px; padding: 24px; }
+  .testi-card p.quote { margin: 0 0 16px; font-size: 0.98rem; }
+  .testi-who { display: flex; align-items: center; gap: 10px; }
+  .avatar { width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0; }
+  .testi-name { font-weight: 600; font-size: 0.92rem; margin: 0; }
+  .testi-meta { color: var(--muted); font-size: 0.82rem; margin: 0; }
+  .final { background: var(--wine-light); text-align: center; border-radius: 4px; }
+  .final h2 { font-size: clamp(1.6rem, 5vw, 2.2rem); margin: 0 0 16px; }
+  .final p { color: var(--muted); max-width: 40ch; margin: 0 auto 30px; }
+  footer { text-align: center; padding: 30px 24px 50px; color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+
+<div class="wrap hero">
+  <div class="hero-text">
+    <p class="kicker">Un guide, pas une promesse en l'air</p>
+    <h1>Reconquérir son ex, sans supplier, sans s'oublier soi-même</h1>
+    <p class="lede">Un chemin en 10 étapes pour se reconstruire, reprendre contact au bon moment, et raviver une histoire — que tu sois une femme ou un homme.</p>
+    <a class="cta" href="#offre">Recevoir le guide — 8,99 €</a>
+  </div>
+  <div class="art">
+    <svg viewBox="0 0 240 280" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="120" cy="140" r="118" fill="none" stroke="var(--line)" stroke-width="1"/>
+      <g fill="none" stroke="var(--wine)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M75 190 C 68 150, 72 115, 92 100 C 100 94, 112 92, 118 98 C 122 90, 134 86, 144 92 C 160 102, 162 130, 150 155 C 142 172, 128 185, 118 196"/>
+        <circle cx="96" cy="78" r="17"/>
+        <path d="M78 172 C 74 150, 78 120, 96 108"/>
+      </g>
+      <g fill="none" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M165 190 C 172 150, 168 115, 148 100 C 140 94, 128 92, 122 98"/>
+        <circle cx="144" cy="78" r="17"/>
+        <path d="M162 172 C 166 150, 162 120, 144 108"/>
+      </g>
+      <path d="M112 130 c -5 -6 -15 -6 -15 3 c 0 7 15 16 15 16 s 15 -9 15 -16 c 0 -9 -10 -9 -15 -3z" fill="var(--wine)" opacity="0.85"/>
+    </svg>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="wrap ache">
+  <section style="padding-bottom:0;">
+    <p>Tu relis vos derniers messages en boucle. Tu hésites entre envoyer un texto et le supprimer trois fois de suite. Tu te demandes si couper le contact va l'éloigner pour de bon, ou si c'est justement ce silence qui va tout changer.</p>
+    <p><strong>Ce guide ne te dit pas quoi ressentir.</strong> Il te dit quoi faire, dans quel ordre, et pourquoi — pour que la prochaine fois que tu lui parles, ce soit toi qui aies changé, pas seulement ton discours.</p>
+  </section>
+</div>
+
+<div class="wrap">
+  <section>
+    <h2 class="serif" style="font-size:1.5rem; font-weight:600;">Pour qui ?</h2>
+    <div class="who-grid">
+      <div class="who-card">
+        <h3>Elle veut reconquérir lui</h3>
+        <p>Comprendre pourquoi les longues explications ne suffisent pas, et ce qui parle vraiment à un homme après une rupture.</p>
+      </div>
+      <div class="who-card">
+        <h3>Il veut reconquérir elle</h3>
+        <p>Reconstruire la confiance par des preuves, pas par des grands gestes précipités.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<hr class="divider">
+
+<div class="wrap">
+  <section>
+    <h2 class="serif" style="font-size:1.6rem; font-weight:600;">Ce que contient le guide</h2>
+    <ol class="toc">
+      <li><span><span class="t">Comprendre pourquoi la rupture est arrivée</span><span class="d">Le bilan honnête avant toute stratégie</span></span></li>
+      <li><span><span class="t">La règle du no contact</span><span class="d">Pourquoi et combien de temps</span></span></li>
+      <li><span><span class="t">Le travail sur soi</span><span class="d">Physique, émotionnel, personnel</span></span></li>
+      <li><span><span class="t">Ce qui diffère selon qui reconquiert qui</span><span class="d">Les dynamiques homme / femme</span></span></li>
+      <li><span><span class="t">Reprendre contact</span><span class="d">Le bon message, au bon moment</span></span></li>
+      <li><span><span class="t">Reconstruire l'attraction et la confiance</span><span class="d">Par les preuves, pas les promesses</span></span></li>
+      <li><span><span class="t">Le premier rendez-vous</span><span class="d">Comment ne pas tout gâcher</span></span></li>
+      <li><span><span class="t">Les erreurs qui ruinent une reconquête</span><span class="d">À éviter absolument</span></span></li>
+      <li><span><span class="t">Quand il faut lâcher prise</span><span class="d">Les signaux à ne pas ignorer</span></span></li>
+      <li><span><span class="t">Plan d'action sur 30 jours</span><span class="d">+ scripts de messages prêts à l'emploi</span></span></li>
+    </ol>
+  </section>
+</div>
+
+<div class="wrap">
+  <blockquote>On ne reconquiert pas une personne. On redevient quelqu'un qu'elle a envie de retrouver.</blockquote>
+</div>
+
+<hr class="divider">
+
+<div class="wrap" id="offre">
+  <section style="text-align:center;">
+    <h2 class="serif" style="font-size:1.7rem; font-weight:600; margin-bottom:10px;">Le guide complet</h2>
+    <p style="color:var(--muted); margin-bottom:26px;">Format PDF, à lire sur téléphone ou ordinateur. Accès immédiat.</p>
+    <a class="cta" href="https://leno17.mychariow.shop/prd_spgqao3i" target="_blank" rel="noopener" style="font-size:1.15rem; padding:17px 36px;">Je le veux — 8,99 €</a>
+    <p class="price-note">Paiement sécurisé. Accès envoyé immédiatement après achat.</p>
+  </section>
+</div>
+
+<hr class="divider">
+
+<div class="wrap">
+  <section>
+    <h2 class="serif" style="font-size:1.5rem; font-weight:600;">Ce qu'en disent celles et ceux qui l'ont suivi</h2>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p class="quote">"Le chapitre sur le no contact m'a évité d'envoyer le message que j'ai écrit et effacé dix fois. Trois semaines plus tard, c'est lui qui a pris de mes nouvelles."</p>
+        <div class="testi-who">
+          <svg class="avatar" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="var(--wine-light)"/><circle cx="20" cy="16" r="7" fill="var(--wine)"/><path d="M6 36c0-8 6-13 14-13s14 5 14 13" fill="var(--wine)"/></svg>
+          <div><p class="testi-name">Aïcha</p><p class="testi-meta">32 ans</p></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <p class="quote">"J'avais tout essayé, surtout les excuses répétées. Ce guide m'a montré que c'est le changement réel, pas les mots, qui compte. Ça a tout changé dans ma façon d'aborder les choses."</p>
+        <div class="testi-who">
+          <svg class="avatar" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="var(--wine-light)"/><circle cx="20" cy="16" r="7" fill="var(--gold)"/><path d="M6 36c0-8 6-13 14-13s14 5 14 13" fill="var(--gold)"/></svg>
+          <div><p class="testi-name">Moussa</p><p class="testi-meta">27 ans</p></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <p class="quote">"Le plan des 30 jours m'a donné une structure concrète au lieu de tourner en rond dans ma tête. Le premier rendez-vous s'est passé exactement comme décrit dans le chapitre 7."</p>
+        <div class="testi-who">
+          <svg class="avatar" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="var(--wine-light)"/><circle cx="20" cy="16" r="7" fill="var(--wine)"/><path d="M6 36c0-8 6-13 14-13s14 5 14 13" fill="var(--wine)"/></svg>
+          <div><p class="testi-name">Léa</p><p class="testi-meta">29 ans</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<hr class="divider">
+
+<div class="wrap">
+  <section>
+    <h2 class="serif" style="font-size:1.5rem; font-weight:600;">Questions fréquentes</h2>
+    <div class="faq-item">
+      <h3>Est-ce que ça fonctionne dans tous les cas ?</h3>
+      <p>Non, et le guide le dit clairement : le chapitre 9 t'aide justement à reconnaître quand il vaut mieux tourner la page. Mais dans tous les cas, tu en ressors plus clair(e) sur toi-même.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Combien de temps pour voir des résultats ?</h3>
+      <p>Le plan d'action est prévu sur 30 jours, mais chaque situation est différente selon l'intensité de la relation.</p>
+    </div>
+    <div class="faq-item">
+      <h3>C'est adapté si on a des enfants ensemble ?</h3>
+      <p>Oui, le chapitre 2 couvre spécifiquement les exceptions au no contact dans ce cas.</p>
+    </div>
+  </section>
+</div>
+
+<div class="wrap final">
+  <div style="padding:56px 24px;">
+    <h2 class="serif">Le premier pas, c'est de fermer cette page et de couper le contact.</h2>
+    <p>Le guide t'accompagne pour tout le reste.</p>
+    <a class="cta" href="#offre">Recevoir le guide — 8,99 €</a>
+  </div>
+</div>
+
+<footer>© 2026 — Ce guide est un outil de développement personnel, pas un conseil professionnel.</footer>
+
+</body>
+</html>
